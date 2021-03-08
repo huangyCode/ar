@@ -22,7 +22,7 @@ const app = new Koa();
 
 
 //const schedule = require('node-schedule');
-const port = env === 'production' ? 9980 : 3380;
+const port = env === 'production' ? 4000 : 4000;
 app.use(cors());
 app.use(errorHandle);
 app.use(koaBody({multipart: true, strict: false}));
