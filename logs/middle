@@ -1,136 +1,15 @@
-[2021-03-07 23:28:37.219] [INFO] resLogger - 
-*************** response log start ***************
-request method: POST
-request originalUrl:  /login/regist/queryEstateDetail
-request client ip:  ::1
-request body: 
-{"id":1}
-response time: 13
-response status: 404
-response body: 
-undefined
-*************** response log end ***************
-
-[2021-03-07 23:28:53.131] [INFO] resLogger - 
-*************** response log start ***************
-request method: POST
-request originalUrl:  /login/build/queryEstateDetail
-request client ip:  ::1
-request body: 
-{"id":1}
-response time: 0
-response status: 404
-response body: 
-undefined
-*************** response log end ***************
-
-[2021-03-07 23:30:08.484] [WARN] console - DEPRECATED: opts.strict has been deprecated in favor of opts.parsedMethods.
-[2021-03-07 23:30:08.675] [INFO] console - listening on port 3380 in undefined
-[2021-03-07 23:30:11.941] [WARN] console - DEPRECATED: opts.strict has been deprecated in favor of opts.parsedMethods.
-[2021-03-07 23:30:12.130] [INFO] console - listening on port 3380 in undefined
-[2021-03-07 23:30:14.952] [INFO] resLogger - 
-*************** response log start ***************
-request method: POST
-request originalUrl:  /login/build/queryEstateDetail
-request client ip:  ::1
-request body: 
-{"id":1}
-response time: 18
-response status: 404
-response body: 
-undefined
-*************** response log end ***************
-
-[2021-03-07 23:30:44.501] [WARN] console - DEPRECATED: opts.strict has been deprecated in favor of opts.parsedMethods.
-[2021-03-07 23:30:44.680] [INFO] console - listening on port 3380 in undefined
-[2021-03-07 23:30:47.200] [INFO] [default] - Executing (default): SELECT `id`, `name`, `address`, `city`, `district`, `province`, `contact`, `desc`, `tag`, `create_time` AS `createTime`, `status` FROM `estate` AS `estate` WHERE `estate`.`id` = 1;
-[2021-03-07 23:30:47.209] [ERROR] errorLogger - 
-*************** error log start ***************
-request method: POST
-request originalUrl:  /build/queryEstateDetail
-request client ip:  ::1
-request body: 
-{"id":1}
-response time: 101
-err name: SequelizeDatabaseError
-err message: Unknown column 'status' in 'field list'
-err stack: SequelizeDatabaseError: Unknown column 'status' in 'field list'
-    at Query.formatError (/Users/nova/Documents/works/yoho/ar/node_modules/sequelize/lib/dialects/mysql/query.js:247:16)
-    at Query.handler [as onResult] (/Users/nova/Documents/works/yoho/ar/node_modules/sequelize/lib/dialects/mysql/query.js:68:23)
-    at Query.execute (/Users/nova/Documents/works/yoho/ar/node_modules/mysql2/lib/commands/command.js:30:14)
-    at Connection.handlePacket (/Users/nova/Documents/works/yoho/ar/node_modules/mysql2/lib/connection.js:408:32)
-    at PacketParser.Connection.packetParser.p [as onPacket] (/Users/nova/Documents/works/yoho/ar/node_modules/mysql2/lib/connection.js:70:12)
-    at PacketParser.executeStart (/Users/nova/Documents/works/yoho/ar/node_modules/mysql2/lib/packet_parser.js:75:16)
-    at Socket.Connection.stream.on.data (/Users/nova/Documents/works/yoho/ar/node_modules/mysql2/lib/connection.js:77:25)
-    at Socket.emit (events.js:189:13)
-    at addChunk (_stream_readable.js:288:12)
-    at readableAddChunk (_stream_readable.js:269:11)
-    at Socket.Readable.push (_stream_readable.js:224:10)
-    at TCP.onStreamRead [as onread] (internal/stream_base_commons.js:145:17)
-*************** error log end ***************
-
-[2021-03-07 23:31:46.231] [WARN] console - DEPRECATED: opts.strict has been deprecated in favor of opts.parsedMethods.
-[2021-03-07 23:31:46.408] [INFO] console - listening on port 3380 in undefined
-[2021-03-07 23:31:55.563] [INFO] [default] - Executing (default): SELECT `id`, `name`, `address`, `city`, `district`, `province`, `contact`, `desc`, `tag`, `create_time` AS `createTime` FROM `estate` AS `estate` WHERE `estate`.`id` = 1;
-[2021-03-07 23:31:55.573] [INFO] [default] - Executing (default): SELECT `id`, `estate_id` AS `estateId`, `number`, `open_time` AS `openTime`, `contact`, `price_from` AS `priceFrom`, `price_to` AS `priceTo`, `unit`, `create_time` AS `createTime` FROM `building` AS `building` WHERE `building`.`estate_id` = 1;
-[2021-03-07 23:31:55.578] [INFO] resLogger - 
+[2021-03-09 01:24:10.778] [INFO] [default] - Executing (default): SELECT `id`, `name`, `address`, `city`, `district`, `province`, `contact`, `desc`, `tag`, `create_time` AS `createTime` FROM `estate` AS `estate` WHERE `estate`.`id` = 1;
+[2021-03-09 01:24:10.790] [INFO] [default] - Executing (default): SELECT `id`, `estate_id` AS `estateId`, `number`, `open_time` AS `openTime`, `contact`, `price_from` AS `priceFrom`, `price_to` AS `priceTo`, `unit`, `create_time` AS `createTime` FROM `building` AS `building` WHERE `building`.`estate_id` = 1;
+[2021-03-09 01:24:10.793] [INFO] resLogger - 
 *************** response log start ***************
 request method: POST
 request originalUrl:  /build/queryEstateDetail
 request client ip:  ::1
 request body: 
 {"id":1}
-response time: 91
+response time: 52
 response status: 200
 response body: 
 {"result":true,"code":200,"data":{"id":1,"name":"xxx小区","address":"江东中路13号","city":"南京市","district":"建邺区","province":"江苏省","contact":"52289786","desc":"位于江东中路的一个地理位置极好的楼盘","tag":"['学区房','地段好','有增值空间']","createTime":null}}
-*************** response log end ***************
-
-[2021-03-07 23:32:32.202] [INFO] [default] - Executing (default): SELECT `id`, `name`, `address`, `city`, `district`, `province`, `contact`, `desc`, `tag`, `create_time` AS `createTime` FROM `estate` AS `estate`;
-[2021-03-07 23:32:32.207] [INFO] resLogger - 
-*************** response log start ***************
-request method: POST
-request originalUrl:  /build/queryEstate
-request client ip:  ::1
-request body: 
-{"id":1}
-response time: 13
-response status: 200
-response body: 
-{"result":true,"code":200,"data":[{"id":1,"name":"xxx小区","address":"江东中路13号","city":"南京市","district":"建邺区","province":"江苏省","contact":"52289786","desc":"位于江东中路的一个地理位置极好的楼盘","tag":"['学区房','地段好','有增值空间']","createTime":null}]}
-*************** response log end ***************
-
-[2021-03-07 23:32:50.814] [ERROR] errorLogger - 
-*************** error log start ***************
-request method: POST
-request originalUrl:  /build/queryBuildDetail
-request client ip:  ::1
-request body: 
-{"id":1}
-response time: 1
-err name: TypeError
-err message: Cannot read property 'dataValues' of null
-err stack: TypeError: Cannot read property 'dataValues' of null
-    at /Users/nova/Documents/works/yoho/ar/controller/build.js:40:22
-    at Generator.next (<anonymous>)
-    at step (/Users/nova/Documents/works/yoho/ar/controller/build.js:111:191)
-    at /Users/nova/Documents/works/yoho/ar/controller/build.js:111:361
-*************** error log end ***************
-
-[2021-03-07 23:33:24.927] [INFO] [default] - Executing (default): SELECT `id`, `estate_id` AS `estateId`, `number`, `open_time` AS `openTime`, `contact`, `price_from` AS `priceFrom`, `price_to` AS `priceTo`, `unit`, `create_time` AS `createTime` FROM `building` AS `building` WHERE `building`.`id` = 1;
-[2021-03-07 23:33:24.930] [INFO] [default] - Executing (default): SELECT `id`, `build_id` AS `buildId`, `house_id` AS `houseId`, `create_time` AS `createTime` FROM `build_house_link` AS `buildHouseLink` WHERE `buildHouseLink`.`build_id` = 1;
-[2021-03-07 23:33:24.935] [INFO] [default] - Executing (default): SELECT `id`, `build_id` AS `buildId`, `desc`, `create_time` AS `createTime`, `update_time` AS `updateTime` FROM `news_feed` AS `newsFeed` WHERE `newsFeed`.`build_id` = 1;
-[2021-03-07 23:33:24.939] [INFO] [default] - Executing (default): SELECT `id`, `img`, `desc`, `area`, `price`, `create_time` AS `createTime` FROM `house` AS `house` WHERE `house`.`id` IN (1);
-[2021-03-07 23:33:24.942] [INFO] resLogger - 
-*************** response log start ***************
-request method: POST
-request originalUrl:  /build/queryBuildDetail
-request client ip:  ::1
-request body: 
-{"buildId":1}
-response time: 23
-response status: 200
-response body: 
-{"result":true,"code":200,"data":{"id":1,"estateId":1,"number":"一单元","openTime":"","contact":"52277098","priceFrom":"200万元","priceTo":"350万","unit":null,"createTime":null,"houseList":[{"id":1,"img":"xxxxx.com","desc":"两室1厅1卫","area":"89","price":"24000.00","createTime":null}],"news":[{"id":1,"buildId":1,"desc":"在售状态很不错","createTime":null,"updateTime":null}]}}
 *************** response log end ***************
 
